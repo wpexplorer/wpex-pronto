@@ -1,0 +1,214 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Pronto WordPress Theme\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-08-27 14:09-0700\n"
+"PO-Revision-Date: 2016-04-27 13:14-0800\n"
+"Last-Translator: Authentic Themes <noreply@authenticthemes.com>\n"
+"Language-Team: WPExplorer.com\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;__;_e;_n;_nx\n"
+"X-Poedit-Basepath: .\n"
+"X-Generator: Poedit 1.8.8\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../404.php:17
+msgid "404 Not found"
+msgstr ""
+
+#: ../404.php:21
+msgid "Unfortunately the page you requested could not be found."
+msgstr ""
+
+#: ../comments.php:24
+msgid "0 Comments"
+msgstr ""
+
+#: ../comments.php:24 ../single.php:38
+msgid "1 Comment"
+msgstr ""
+
+#: ../comments.php:24
+msgid "Comments"
+msgstr ""
+
+#: ../comments.php:37
+msgid "Comment navigation"
+msgstr ""
+
+#: ../comments.php:38
+msgid "&larr; Older Comments"
+msgstr ""
+
+#: ../comments.php:39
+msgid "Newer Comments &rarr;"
+msgstr ""
+
+#: ../comments.php:44
+msgid "Comments are closed."
+msgstr ""
+
+#: ../content-none.php:14
+msgid "Nothing Found"
+msgstr ""
+
+#: ../content-none.php:16
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: ../content-none.php:18
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with "
+"different keywords."
+msgstr ""
+
+#: ../content-none.php:20
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+
+#: ../functions.php:52
+msgid "Main"
+msgstr ""
+
+#: ../inc/comments-callback.php:29
+msgid "Pingback:"
+msgstr ""
+
+#: ../inc/comments-callback.php:29 ../inc/comments-callback.php:54
+msgid "Edit"
+msgstr ""
+
+#: ../inc/comments-callback.php:60
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: ../inc/comments-callback.php:68
+msgid "reply to comment"
+msgstr ""
+
+#: ../inc/excerpts.php:24
+msgid "read more"
+msgstr ""
+
+#: ../inc/theme-customizer.php:16
+msgid "Theme Settings"
+msgstr ""
+
+#: ../inc/theme-customizer.php:27
+msgid "Accent Color"
+msgstr ""
+
+#: ../inc/theme-customizer.php:40
+msgid "Image Logo"
+msgstr ""
+
+#: ../inc/theme-customizer.php:52
+msgid "Read More Link"
+msgstr ""
+
+#: ../inc/theme-customizer.php:66
+msgid "Featured Image on Entries"
+msgstr ""
+
+#: ../inc/theme-customizer.php:80
+msgid "Featured Image on Posts"
+msgstr ""
+
+#: ../inc/theme-customizer.php:94
+msgid "Display Post Publish Date"
+msgstr ""
+
+#: ../inc/theme-customizer.php:108
+msgid "Display Post Category"
+msgstr ""
+
+#: ../inc/theme-customizer.php:122
+msgid "Display Post Author"
+msgstr ""
+
+#: ../inc/theme-customizer.php:136
+msgid "Display Post Comment Count"
+msgstr ""
+
+#: ../inc/theme-customizer.php:150
+msgid "Tags on Posts"
+msgstr ""
+
+#: ../inc/theme-customizer.php:158
+msgid "Theme Image Sizes"
+msgstr ""
+
+#: ../inc/theme-customizer.php:160
+msgid ""
+"After altering the default image sizes you MUST regenerate your site "
+"thumbnails via a 3rd party plugin."
+msgstr ""
+
+#: ../inc/theme-customizer.php:171
+msgid "Entry Image Width"
+msgstr ""
+
+#: ../inc/theme-customizer.php:175 ../inc/theme-customizer.php:190
+#: ../inc/theme-customizer.php:220 ../inc/theme-customizer.php:235
+msgid "Default"
+msgstr ""
+
+#: ../inc/theme-customizer.php:186
+msgid "Entry Image Height"
+msgstr ""
+
+#: ../inc/theme-customizer.php:201
+msgid "Entry Image Crop"
+msgstr ""
+
+#: ../inc/theme-customizer.php:216
+msgid "Post Image Width"
+msgstr ""
+
+#: ../inc/theme-customizer.php:231
+msgid "Post Image Height"
+msgstr ""
+
+#: ../inc/theme-customizer.php:246
+msgid "Post Image Crop"
+msgstr ""
+
+#: ../inc/welcome.php:53 ../inc/welcome.php:54
+msgid "Theme"
+msgstr ""
+
+#: ../inc/widget-areas.php:14
+msgid "Sidebar"
+msgstr ""
+
+#: ../inc/widget-areas.php:16
+msgid "Widgets in this area are used in the default sidebar."
+msgstr ""
+
+#: ../page.php:47
+msgid "Edit Page"
+msgstr ""
+
+#: ../search.php:15
+#, php-format
+msgid "Search Results for: %s"
+msgstr ""
+
+#: ../single.php:38
+msgid "Leave a comment"
+msgstr ""
+
+#: ../single.php:38
+msgid "% Comments"
+msgstr ""
+
+#: ../single.php:38
+msgid "Comments closed"
+msgstr ""
