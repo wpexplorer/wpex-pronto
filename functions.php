@@ -26,16 +26,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-// Theme info
-function wpex_get_theme_info() {
-	return array(
-		'name'      => 'Pronto',
-		'url'       => 'http://www.wpexplorer.com/pronto-wordpress-theme/',
-		'changelog' => 'https://wpexplorer-updates.com/changelog/pronto/',
-		'dir'       => get_template_directory_uri() .'/inc/',
-	);
-}
-
 // Theme setup
 function wpex_theme_setup() {
 
@@ -91,17 +81,11 @@ add_filter( 'comment_form_fields', 'wpex_move_comment_form_fields' );
 
 // Include main functions
 $dir = get_template_directory();
-require_once( $dir .'/inc/updates.php' );
 require_once ( $dir .'/inc/theme-customizer.php' );
 require_once( $dir .'/inc/helpers.php' );
 require_once( $dir .'/inc/scripts.php' );
 require_once( $dir .'/inc/widget-areas.php' );
 require_once( $dir .'/inc/excerpts.php' );
-if ( is_admin() ) {
-	require_once( $dir .'/inc/welcome.php' );
-	require_once( $dir .'/inc/dashboard-feed.php' );
-} else {
-	require_once( $dir .'/inc/accent-color.php' );
-	require_once( $dir .'/inc/comments-callback.php' );
-	require_once( $dir .'/inc/pagination.php' );
-}
+require_once( $dir .'/inc/accent-color.php' );
+require_once( $dir .'/inc/comments-callback.php' );
+require_once( $dir .'/inc/pagination.php' );
