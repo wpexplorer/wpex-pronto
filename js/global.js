@@ -14,10 +14,11 @@
 	
 	// Toggle sidebar
 	function wpexMobileToggle() {
-		$( 'a#toggle-btn' ).click( function() {
-			$( 'div#toggle-wrap' ).toggleClass( 'visible' );
-			$( this ).find( '.fa' ).toggleClass( 'fa-bars fa-remove' );
-			return false;
+		$( '#toggle-btn' ).click( function( event ) {
+			event.preventDefault();
+			var expanded = $( '#toggle-wrap' ).toggleClass( 'visible' ).hasClass( 'visible' );
+			$( this ).attr( 'aria-expanded', expanded ? 'true' : 'false' )
+				.find( '.fa' ).toggleClass( 'fa-bars fa-remove' );
 		} );
 	}
 	
