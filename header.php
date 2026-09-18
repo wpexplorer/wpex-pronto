@@ -21,6 +21,8 @@
 <!-- Begin Body -->
 <body <?php body_class('body'); ?>>
 
+	<a class="skip-link screen-reader-text" href="#main"><?php esc_html_e( 'Skip to content', 'pronto' ); ?></a>
+
 	<div id="wrap" class="container clr">
 		<div class="container-left clr">
 		<header id="masthead" class="site-header clr" role="banner">
@@ -40,7 +42,10 @@
 			</div>
 		</header>
 
-		<a href="#" id="toggle-btn"><span class="fa fa-bars"></span></a>
+		<button type="button" id="toggle-btn" aria-expanded="false" aria-controls="toggle-wrap">
+			<span class="fa fa-bars" aria-hidden="true"></span>
+			<span class="screen-reader-text"><?php esc_html_e( 'Menu', 'pronto' ); ?></span>
+		</button>
 
 		<div id="toggle-wrap" class="clr">
 			<div id="navbar" class="navbar clr">
@@ -57,4 +62,4 @@
 		</div>
 	</div>
 
-	<div id="main" class="container-right site-main clr fitvids">
+	<div id="main" class="container-right site-main clr fitvids" tabindex="-1">
