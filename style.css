@@ -12,11 +12,14 @@
 
 ----------------------------------------------------------- */
 
-a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, caption, canvas, center, cite, code, dd, del, details, dfn, dialog, div, dl, dt, em, embed, fieldset, figcaption, figure, form, footer, header, hgroup, h1, h2, h3, h4, h5, h6, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, output, p, pre, q, ruby, s, samp, section, small, span, strike, strong, sub, summary, sup, tt, table, tbody, textarea, tfoot, thead, time, tr, th, td, u, ul, var, video { font-family: inherit; font-size: 100%; font-weight: inherit; font-style: inherit; vertical-align: baseline; white-space: normal; margin: 0; padding: 0; border: 0; outline: 0; background: transparent; }
+a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, caption, canvas, center, cite, code, dd, del, details, dfn, dialog, div, dl, dt, em, embed, fieldset, figcaption, figure, form, footer, header, hgroup, h1, h2, h3, h4, h5, h6, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, output, p, pre, q, ruby, s, samp, section, small, span, strike, strong, sub, summary, sup, tt, table, tbody, textarea, tfoot, thead, time, tr, th, td, u, ul, var, video { font-family: inherit; font-size: 100%; font-weight: inherit; font-style: inherit; vertical-align: baseline; white-space: normal; margin: 0; padding: 0; border: 0; background: transparent; }
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block }
 ol, ul { list-style: none }
 blockquote, q { quotes: none }
-:focus { outline: 0 }
+/* Focus styles
+----------------------------------------------------------- */
+:focus-visible { outline: 2px solid #111; outline-offset: 2px; }
+:focus:not(:focus-visible) { outline: none; }
 table { border-collapse: collapse; border-spacing: 0; }
 img { max-width: 100%; height: auto; }
 
@@ -42,7 +45,8 @@ textarea { width: 100%; max-width: 100%; padding: 15px; -webkit-appearance: none
 input[type=search] { font-size: 12px; font-weight: normal; }
 #sidebar #searchsubmit, #footer #searchsubmit { display: none }
 #sidebar input[type=search] { width: 100% }
-input[type="search"]:focus, input[type="text"]:focus, input[type="password"]:focus, input[type="email"]:focus, input[type="tel"]:focus, input[type="url"]:focus, textarea:focus { outline: none; }
+input[type="search"]:focus, input[type="text"]:focus, input[type="password"]:focus, input[type="email"]:focus, input[type="tel"]:focus, input[type="url"]:focus, textarea:focus { border-color: #999; }
+input[type="search"]:focus-visible, input[type="text"]:focus-visible, input[type="password"]:focus-visible, input[type="email"]:focus-visible, input[type="tel"]:focus-visible, input[type="url"]:focus-visible, textarea:focus-visible { outline: 2px solid #111; outline-offset: 2px; }
 
 /*buttons*/
 button, input[type="button"], input[type="submit"], input[type="submit"] { font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif; font-size: 12px; cursor: pointer; display: inline-block; background: #F5F5F5 ;background: -webkit-gradient(linear, left bottom, left top, from(#F5F5F5), to(#FFF)), #FFF;background: -moz-linear-gradient(90deg, #F5F5F5 0%, #FFF 100%), #FFF;border: 1px solid #ccc;color: #444;font-weight: bold;line-height: 1.4em;padding: 8px 10px;width: auto; border-radius: 3px; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); }
@@ -52,7 +56,7 @@ button:active, input[type="button"]:active, input[type="submit"]:active, #commen
 /* WordPress Styles
 ----------------------------------------------------------- */
 .sticky {}
-.screen-reader-text { clip: rect(1px, 1px, 1px, 1px); position: absolute !important; height: 1px; width: 1px; overflow: hidden; }
+.screen-reader-text { clip: rect(1px, 1px, 1px, 1px); -webkit-clip-path: inset(50%); clip-path: inset(50%); position: absolute !important; height: 1px; width: 1px; overflow: hidden; word-wrap: normal !important; }
 .screen-reader-text:focus { background-color: #f1f1f1; border-radius: 3px; box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6); clip: auto !important; color: #21759b; display: block; font-size: 14px; font-size: 0.875rem; font-weight: bold; height: auto; left: 5px; line-height: normal; padding: 15px 23px 14px; text-decoration: none; top: 5px; width: auto; z-index: 100000; }
 .gallery-caption {}
 
@@ -145,10 +149,7 @@ small { font-size: 80% }
 hr { border: solid #eee; border-width: 1px 0 0; clear: both; margin: 40px 0 40px; height: 0; }
 p a, p a:visited { line-height: inherit }
 a:link { text-decoration: none }
-a:focus { outline: 0 }
-a { outline: 0 }
 p a, p a:visited { line-height: inherit }
-a:focus { outline: 0 }
 
 /* Headings
 ----------------------------------------------------------- */
@@ -330,7 +331,7 @@ span.required { color: #F00 }
 	.page .container-right { padding-left: 0; max-width: 100%; width: 100%; min-width: 100%; }
 	#toggle-wrap { display: none; }
 	#toggle-wrap.visible { display: block; }
-	#toggle-btn { display: block; background: #14B694; color: #fff; height: 35px; width: 35px; line-height: 35px; text-align: center; margin-bottom: 30px; font-size: 14px; }
+	#toggle-btn { display: block; background: #14B694; color: #fff; height: 35px; width: 35px; line-height: 35px; text-align: center; margin-bottom: 30px; font-size: 14px; border: 0; border-radius: 0; box-shadow: none; padding: 0; font-weight: normal; }
 	#toggle-btn:hover { text-decoration: none; opacity: 0.8; }
 	.dropdown-menu:before { display: none; }
 	.single-nav { display: none; }
