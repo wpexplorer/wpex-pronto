@@ -17,8 +17,7 @@
 		$( '#toggle-btn' ).click( function( event ) {
 			event.preventDefault();
 			var expanded = $( '#toggle-wrap' ).toggleClass( 'visible' ).hasClass( 'visible' );
-			$( this ).attr( 'aria-expanded', expanded ? 'true' : 'false' )
-				.find( '.fa' ).toggleClass( 'fa-bars fa-remove' );
+			$( this ).attr( 'aria-expanded', expanded ? 'true' : 'false' );
 		} );
 	}
 	
