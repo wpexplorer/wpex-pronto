@@ -29,8 +29,8 @@ if ( ! function_exists('wpex_pagination') ) {
 				'total'		=> $total,
 				'mid_size'	=> 4,
 				'type'		=> 'list',
-				'prev_text'	=> '<i class="fa fa-angle-left"></i>',
-				'next_text'	=> '<i class="fa fa-angle-right"></i>',
+				'prev_text'	=> wpex_get_icon( 'chevron-left', array( 'size' => 'lg', 'label' => __( 'Previous page', 'pronto' ) ) ),
+				'next_text'	=> wpex_get_icon( 'chevron-right', array( 'size' => 'lg', 'label' => __( 'Next page', 'pronto' ) ) ),
 			 ));
 		}
 	}

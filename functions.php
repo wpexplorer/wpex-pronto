@@ -82,6 +82,7 @@ add_filter( 'comment_form_fields', 'wpex_move_comment_form_fields' );
 // Include main functions
 $dir = get_template_directory();
 require_once ( $dir .'/inc/theme-customizer.php' );
+require_once( $dir .'/inc/icons.php' );
 require_once( $dir .'/inc/helpers.php' );
 require_once( $dir .'/inc/scripts.php' );
 require_once( $dir .'/inc/widget-areas.php' );

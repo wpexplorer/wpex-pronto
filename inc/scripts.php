@@ -15,8 +15,7 @@ function wpex_load_scripts() {
 
 	// CSS
 	wp_enqueue_style( 'raleway', $dir . '/css/raleway.css', array(), $version );
-	wp_enqueue_style( 'font-awesome', $dir . '/css/font-awesome.min.css', array(), '4.6.1' );
-	wp_enqueue_style( 'style', get_stylesheet_uri(), array( 'raleway', 'font-awesome' ), $version );
+	wp_enqueue_style( 'style', get_stylesheet_uri(), array( 'raleway' ), $version );
 
 	// JS
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {

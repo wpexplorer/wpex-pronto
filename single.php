@@ -28,16 +28,16 @@ get_header(); ?>
 
 				<ul class="meta single-meta clr">
 					<?php if ( get_theme_mod( 'wpex_post_date', true ) ) : ?>
-						<li><span class="fa fa-clock-o"></span><?php the_date(); ?></li>
+						<li><?php wpex_icon( 'clock' ); ?><?php the_date(); ?></li>
 					<?php endif; ?>
 					<?php if ( get_theme_mod( 'wpex_post_category', true ) ) : ?>
-						<li><span class="fa fa-folder-open"></span><?php the_category( ' / ' ); ?></li>
+						<li><?php wpex_icon( 'folder' ); ?><?php the_category( ' / ' ); ?></li>
 					<?php endif; ?>
 					<?php if ( comments_open() && get_theme_mod( 'wpex_post_comment_count', true ) ) : ?>
-						<li class="comment-scroll"><span class="fa fa-comment"></span> <?php comments_popup_link(__( 'Leave a comment', 'pronto' ), __( '1 Comment', 'pronto' ), __( '% Comments', 'pronto' ), 'comments-link', __( 'Comments closed', 'pronto' ) ); ?></li>
+						<li class="comment-scroll"><?php wpex_icon( 'message-circle' ); ?><?php comments_popup_link(__( 'Leave a comment', 'pronto' ), __( '1 Comment', 'pronto' ), __( '% Comments', 'pronto' ), 'comments-link', __( 'Comments closed', 'pronto' ) ); ?></li>
 					<?php endif; ?>
 					<?php if ( get_theme_mod( 'wpex_post_author', true ) ) : ?>
-						<li><span class="fa fa-user"></span><?php the_author_posts_link(); ?></li>
+						<li><?php wpex_icon( 'user' ); ?><?php the_author_posts_link(); ?></li>
 					<?php endif; ?>
 				</ul>
 			</header>

@@ -43,7 +43,8 @@
 		</header>
 
 		<button type="button" id="toggle-btn" aria-expanded="false" aria-controls="toggle-wrap">
-			<span class="fa fa-bars" aria-hidden="true"></span>
+			<?php wpex_icon( 'menu', array( 'class' => 'toggle-icon-open' ) ); ?>
+			<?php wpex_icon( 'x', array( 'class' => 'toggle-icon-close' ) ); ?>
 			<span class="screen-reader-text"><?php esc_html_e( 'Menu', 'pronto' ); ?></span>
 		</button>
 
