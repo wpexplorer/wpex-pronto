@@ -10,6 +10,8 @@
 
 function wpex_customizer_general( $wp_customize ) {
 
+	require_once get_template_directory() . '/inc/customizer-notice-control.php';
+
 	// Add Section
 	$wp_customize->add_section( 'wpex_general' , array(
 		'title'      => __( 'Theme Settings', 'pronto' ),
@@ -156,8 +158,19 @@ function wpex_customizer_general( $wp_customize ) {
 	$wp_customize->add_section( 'wpex_image_sizes' , array(
 		'title' => __( 'Theme Image Sizes', 'pronto' ),
 		'priority' => 240,
-		'description' => __( 'After altering the default image sizes you MUST regenerate your site thumbnails via a 3rd party plugin.', 'pronto' ),
 	) );
+
+	// Regenerate Thumbnails Notice
+	$wp_customize->add_control( new WPEX_Customize_Notice_Control( $wp_customize, 'wpex_image_sizes_notice', array(
+		'section'     => 'wpex_image_sizes',
+		'settings'    => array(),
+		'priority'    => 1,
+		'notice_type' => 'warning',
+		'label'       => __( 'Regenerate your thumbnails', 'pronto' ),
+		'description' => __( 'Changing these sizes only affects images uploaded from now on. Existing thumbnails must be recreated with a plugin such as Force Regenerate Thumbnails.', 'pronto' ),
+		'link_url'    => 'https://wordpress.org/plugins/force-regenerate-thumbnails/',
+		'link_text'   => __( 'Get Force Regenerate Thumbnails', 'pronto' ),
+	) ) );
 
 	// Entry Image Width
 	$wp_customize->add_setting( 'wpex_entry_image_width', array(
