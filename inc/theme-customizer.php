@@ -12,6 +12,8 @@ function wpex_customizer_general( $wp_customize ) {
 
 	require_once get_template_directory() . '/inc/customizer-notice-control.php';
 
+	$wp_customize->register_control_type( 'WPEX_Customize_Notice_Control' );
+
 	// Add Section
 	$wp_customize->add_section( 'wpex_general' , array(
 		'title'      => __( 'Theme Settings', 'pronto' ),
@@ -167,9 +169,11 @@ function wpex_customizer_general( $wp_customize ) {
 		'priority'    => 1,
 		'notice_type' => 'warning',
 		'label'       => __( 'Regenerate your thumbnails', 'pronto' ),
-		'description' => __( 'Changing these sizes only affects images uploaded from now on. Existing thumbnails must be recreated with a plugin such as Force Regenerate Thumbnails.', 'pronto' ),
-		'link_url'    => 'https://wordpress.org/plugins/force-regenerate-thumbnails/',
-		'link_text'   => __( 'Get Force Regenerate Thumbnails', 'pronto' ),
+		'description' => sprintf(
+			/* translators: %s: plugin name linked to its page on WordPress.org. */
+			__( 'Changing these sizes only affects images uploaded from now on. Existing thumbnails must be recreated with a plugin such as %s.', 'pronto' ),
+			'<a href="https://wordpress.org/plugins/force-regenerate-thumbnails/" target="_blank" rel="noopener noreferrer">Force Regenerate Thumbnails<span class="screen-reader-text"> ' . esc_html__( '(opens in a new tab)', 'pronto' ) . '</span></a>'
+		),
 	) ) );
 
 	// Entry Image Width
